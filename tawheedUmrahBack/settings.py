@@ -10,13 +10,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 # Allowed Hosts - Update with your actual domain
-ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    'tawheedumrah.com',  
-    'www.tawheedumrah.com',  
-    '103.195.185.86',  
-]
+ALLOWED_HOSTS = [    "*" ]
 
 # Application definition
 INSTALLED_APPS = [
@@ -148,21 +142,12 @@ APPEND_SLASH = False
 # CORS Configuration
 CORS_ALLOW_ALL_ORIGINS = config('CORS_ALLOW_ALL_ORIGINS', default=False, cast=bool)
 CORS_ALLOWED_ORIGINS = [
-    "http://tawheedumrah.com",  # Replace with your frontend domain
+    "https://tawheedumrah.com/", 
+    "http://localhost:5173/" ,
 ]
 
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_HEADERS = [
-    'accept',
-    'accept-encoding',
-    'authorization',
-    'content-type',
-    'dnt',
-    'origin',
-    'user-agent',
-    'x-csrftoken',
-    'x-requested-with',
-]
+
 
 # Email Configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
