@@ -140,11 +140,12 @@ REST_FRAMEWORK = {
 APPEND_SLASH = False
 
 # CORS Configuration
-CORS_ALLOW_ALL_ORIGINS = config('CORS_ALLOW_ALL_ORIGINS', default=False, cast=bool)
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
-    "https://tawheedumrah.com/", 
-    "http://localhost:5173/" ,
+    "https://tawheedumrah.com",
+    "http://localhost:5173",
 ]
+
 
 CORS_ALLOW_CREDENTIALS = True
 
